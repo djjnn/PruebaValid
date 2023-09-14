@@ -9,19 +9,36 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import userinterfaces.CreateAccount;
 import userinterfaces.MainPage;
 
-public class RegistreUser implements Task {
+/** Clase tarea completa datos de "Registro de usuario"
+ *
+ * @author Daniel Rojas
+ * @version 1.0
+ *
+ */
+public class RegisterUser implements Task {
 
     private final String username;
     private final String password;
     private final String email;
 
-    public RegistreUser(String username, String password, String email){
+    /** Metodo constructor "RegisterUser"
+     *
+     * @param username
+     * @param password
+     * @param email
+     */
+    public RegisterUser(String username, String password, String email){
 
         this.username=username;
         this.password=password;
         this.email=email;
     }
 
+    /** Metodo completar datos de usuario, password y correo en la seccion "Registro de usuario"
+     *
+     * @param actor
+     * @param <T>
+     */
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -35,8 +52,14 @@ public class RegistreUser implements Task {
 
     }
 
-    public static RegistreUser fillFields(String username, String password, String email){
-        return Tasks.instrumented(RegistreUser.class, username, password, email);
+    /** Metodo "fillfields" completar datos "Registro de usuario"
+     * @param username
+     * @param password
+     * @param email
+     * @return RegisterUser
+     */
+    public static RegisterUser fillFields(String username, String password, String email){
+        return Tasks.instrumented(RegisterUser.class, username, password, email);
     }
 }
 

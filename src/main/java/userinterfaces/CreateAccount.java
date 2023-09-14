@@ -5,7 +5,13 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
-
+/**
+ * Clase interfaces pagina Crear cuenta
+ *
+ *  @author Daniel Rojas
+ *  @version 1.0
+ *
+ */
 public class CreateAccount extends PageObject {
 
     public static final Target username = Target.the("Username").located(By.id("wpName2"));

@@ -8,8 +8,19 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromElement;
 import userinterfaces.ViewHistory;
 
+/** Clase tarea Seleccionar dos revisiones Wikipedia
+ *
+ * @author Daniel Rojas
+ * @version 1.0
+ *
+ */
 public class SelectTwoRevisions implements Task {
 
+    /** Metodo Seleccionar dos revisiones y comparar Wikipedia
+     *
+     * @param actor
+     * @param <T>
+     */
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -20,6 +31,10 @@ public class SelectTwoRevisions implements Task {
 
     }
 
+    /** Metodo "select" seleccionar dos revisiones y comparar Wikipedia
+     *
+     * @return SelectTwoRevisions
+     */
     public static SelectTwoRevisions select(){
         return Tasks.instrumented(SelectTwoRevisions.class);
     }

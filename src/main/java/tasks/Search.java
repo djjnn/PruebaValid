@@ -10,14 +10,29 @@ import net.serenitybdd.screenplay.waits.Wait;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import userinterfaces.MainPage;
 
+/** Clase tarea buscar palabra Wikipedia
+ *
+ * @author Daniel Rojas
+ * @version 1.0
+ *
+ */
 public class Search implements Task {
 
     private final String Text;
 
+    /** Metodo constructor "Search"
+     *
+     * @param text
+     */
     public Search(String text){
         this.Text=text;
     }
 
+    /** Metodo ingresar palabra a buscar Wikipedia
+     *
+     * @param actor
+     * @param <T>
+     */
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -28,6 +43,11 @@ public class Search implements Task {
 
     }
 
+    /** Metodo "ofText" Buscar palabra Wikipedia
+     *
+     * @param text
+     * @return Search
+     */
     public static Search ofText(String text){
         return Tasks.instrumented(Search.class, text);
     }

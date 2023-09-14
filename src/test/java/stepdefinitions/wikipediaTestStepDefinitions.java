@@ -56,7 +56,7 @@ public class wikipediaTestStepDefinitions {
 
     @And("enter the username {string}, password {string} and email {string}")
     public void enterTheUsernamePasswordAndEmail(String username, String password, String email){
-        theActorInTheSpotlight().attemptsTo(RegistreUser.fillFields(username, password, email));
+        theActorInTheSpotlight().attemptsTo(RegisterUser.fillFields(username, password, email));
     }
 
     @And("Select two revisions")

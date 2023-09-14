@@ -5,6 +5,13 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
+/**
+ * Clase interfaces pagina principal Wikipedia
+ *
+ *  @author Daniel Rojas
+ *  @version 1.0
+ *
+ */
 @DefaultUrl("https://es.wikipedia.org/wiki/Wikipedia:Portada")
 public class MainPage extends PageObject {
 

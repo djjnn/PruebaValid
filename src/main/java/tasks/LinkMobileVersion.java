@@ -7,8 +7,19 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 import userinterfaces.MainPage;
 
+/** Clase tarea accede al link "Version para moviles"
+ *
+ * @author Daniel Rojas
+ * @version 1.0
+ *
+ */
 public class LinkMobileVersion implements Task {
 
+    /** Metodo click al "Version para moviles"
+     *
+     * @param actor
+     * @param <T>
+     */
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -18,7 +29,11 @@ public class LinkMobileVersion implements Task {
 
     }
 
-    public static LinkMobileVersion enter(){
+    /** Metodo "enter" accion click "Version para moviles"
+     *
+     * @return LinkMobileVersion
+     */
+    public static LinkMobileVersion enter() {
         return Tasks.instrumented(LinkMobileVersion.class);
     }
 }

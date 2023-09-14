@@ -5,6 +5,13 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
+/**
+ * Clase interfaces pagina Ver historial
+ *
+ *  @author Daniel Rojas
+ *  @version 1.0
+ *
+ */
 public class ViewHistory extends PageObject {
 
     public static final Target RadioOne = Target.the("Radio one revision").located(By.id("mw-oldid-112968885"));
